@@ -1,0 +1,110 @@
+body {
+  padding: 50px;
+  font: 10px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #98ffcc;
+  background-color: #4C5760;
+}
+
+h1 {
+  font: 35px "Lucida Grande", Helvetica, Arial, sans-serif;
+  letter-spacing: 5px;
+  color: #98ffcc;
+  background-color: #4C5760;
+}
+
+h2 {
+  padding: 5px;
+  font: 25px "Lucida Grande", Helvetica, Arial, sans-serif;
+  letter-spacing: 3.5px;
+  color: #98ffcc;
+  background-color: #4C5760;
+  float: left;
+}
+
+title {
+    font: 28px "Lucida Grande", Helvetica, Arial, sans-serif;
+    letter-spacing: 5px;
+    color: #98ffcc;
+    background-color: #4C5760;
+  }
+
+a {
+  color: #98ffcc; 
+  background-color: #4C5760;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 7.5px;
+  
+}
+
+.createBtn {
+  color: #98ffcc; 
+  background-color: #4C5760;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 7.5px;
+  float: right;
+  margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    border: none;
+    border-bottom: 2.5px solid #98ffcc;
+    padding: 7.5px;
+    background-color: #4C5760;
+    margin: 10px;
+}
+
+input[type=submit] {
+  color: #98ffcc; 
+  background-color: #4C5760;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px;
+  cursor: pointer;
+}
+
+label {
+  font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 10px;
+}
+
+form {
+  width: 50%;
+}
+
+table {
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  padding: 50px;
+}
+
+td, th {
+  border: 1px solid #4C5760;
+  padding: 35px;
+}
+
+tr:hover {background-color: #4C5760}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #98ffcc;
+  color: #4C5760;
+}
+

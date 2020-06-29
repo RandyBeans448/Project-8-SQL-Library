@@ -1,0 +1,7 @@
+extends layout.pug
+
+block content
+  h2= book.title
+  include by_line
+  p= book.body
+  a(href="/") Back 

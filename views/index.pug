@@ -1,0 +1,25 @@
+extends layout.pug
+
+block content
+    h1(class='title') Books
+
+    p 
+        a(href='/books/new' class='createBtn') CREATE NEW BOOK
+
+    table
+            thead
+                tr
+                    th Title
+                    th Author
+                    th Genre
+                    th Year 
+                tbody
+                    each book in books
+                        tr
+                            td
+                                a(href="/books/" + book.id)= book.title
+                                td= book.author
+                                td= book.genre
+                                td= book.year 
+    button(type='submit' ) ←
+    button(type='submit') →                            
