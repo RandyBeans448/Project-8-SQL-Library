@@ -1,6 +1,5 @@
-const express = require('express');
-const Router = require('Router');
 const Sequelize = require('sequelize');
+
 'use strict';
 module.exports = (sequelize) => {
     class Book extends Sequelize.Model {
