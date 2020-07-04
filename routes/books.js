@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const Book = require('../models').Book;
+//Require OP from Sequelize to access the 'LIKE' operater 
+const Sequelize = require('sequelize');
+const { Op } = Sequelize.Op;
 
 
 function asyncHandler(cb){
@@ -13,6 +16,19 @@ function asyncHandler(cb){
   }
 }
 
+//Search Library for books
+router.get('/books', asyncHandler(async (req, res) => {
+  let { searchQuery } = req.query;
+  let book = await Book.findAll({ where: { 
+    title: { [Op.like]: `%${searchQuery}%`}, 
+    author: { [Op.like]: `%${searchQuery}%`},
+    genre: { [Op.like]: `%${searchQuery}%`},
+    year: { [Op.like]: `%${searchQuery}%`}
+    } 
+  })
+  res.render("index", { book, title: "Search Results" });
+  console.log('Search complete')
+ }));
 
 // Shows the full list of books.
 router.get('/', asyncHandler(async (req, res, next) => {
