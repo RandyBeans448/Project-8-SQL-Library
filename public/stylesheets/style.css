@@ -41,6 +41,22 @@ a {
   
 }
 
+.searchBtn {
+  color: #98ffcc; 
+  background-color: #4C5760;
+  width: 10%;
+}
+
+.searchInput {
+  color: #98ffcc;
+  width: 60%;
+  border: none;
+  border-bottom: 2.5px solid #98ffcc;
+  padding: 7.5px;
+  background-color: #4C5760;
+  margin: 10px;
+}
+
 .createBtn {
   color: #98ffcc; 
   background-color: #4C5760;
@@ -56,6 +72,7 @@ a {
 }
 
 input {
+    color: #98ffcc;
     width: 100%;
     border: none;
     border-bottom: 2.5px solid #98ffcc;
@@ -83,7 +100,7 @@ label {
 }
 
 form {
-  width: 50%;
+  width: 75%;
 }
 
 table {
@@ -98,7 +115,10 @@ td, th {
   padding: 35px;
 }
 
-tr:hover {background-color: #4C5760}
+tr:hover {
+    color: #4C5760;
+    background-color: #98ffcc;
+}
 
 th {
   padding-top: 12px;
@@ -107,4 +127,5 @@ th {
   background-color: #98ffcc;
   color: #4C5760;
 }
+
 
