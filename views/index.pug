@@ -2,14 +2,8 @@ extends layout.pug
 
 block content
 
-    div
-        p 
-            form(action="/", method="get")
-                label(class='searchLabel', for='book-search') Search Library:
-                input(class='searchInput', type='search' name='book-search')
-                input(class='searchBtn', type='submit')
-                
-    a(href='/books/new' class='createBtn') CREATE NEW BOOK
+    div(class='createBtnDiv')            
+        a(href='/books/new' class='createBtn') CREATE NEW BOOK
     table
             thead
                 tr
@@ -21,9 +15,8 @@ block content
                     each book in books
                         tr
                             td
-                                a(href="/books/" + book.id)= book.title
+                                a(class='bookLinks' href="/books/" + book.id)= book.title
                                 td= book.author
                                 td= book.genre
                                 td= book.year 
-    button(type='submit' ) ←
-    button(type='submit') →     
+                         
