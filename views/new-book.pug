@@ -1,7 +1,8 @@
 extends layout.pug
 
 block content
-     h1(class='title') New Book
+     include errors
+     h2(class='title') New Book
      div
         form(action="/books", method="post")
             p 
@@ -43,6 +44,7 @@ block content
             p
                 input(
                     type="submit"
-                    value="Submit")
+                    value="Submit"
+                    class="submit")
             p
-                a(class="button" href="/") Cancel
+                a(class="cancel" href="/") Cancel
