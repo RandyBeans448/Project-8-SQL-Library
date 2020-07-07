@@ -8,7 +8,7 @@ function asyncHandler(callback){
     try {
       await callback(req, res, next)
     } catch(error){
-      res.status(500).send(error);
+      res.status(500).render('error');
     }
   }
 }
@@ -39,6 +39,7 @@ router.post('/', asyncHandler(async (req, res) => {
   } catch (error) {
     if (error.name === 'SequelizeValidationError') {
       book = await Book.build(req.body);
+      res.render('update-book', { book, errors: error.errors, title: "New Book" })
     } else {
       throw error;
     }
@@ -51,9 +52,7 @@ router.get('/:id', asyncHandler(async (req, res) => {
   if(book) {
     res.render('update-book', { book, title: book.title });  
   } else {
-    const error = new Error('Sorry but this book does not exsist');
-    error.status(500).render('errors');
-    next(error);
+throw error;
   }
 })); 
 
@@ -75,6 +74,7 @@ router.post('/:id', asyncHandler(async (req, res) => {
       res.render('book/' + book.id, { book, errors: error.errors, title: 'Edit Book' })
     } else {
       throw error;
+      
     }
   }
 }));
@@ -87,3 +87,4 @@ router.post('/:id/delete', asyncHandler(async (req ,res) => {
 }));
 
 module.exports = router;
+
