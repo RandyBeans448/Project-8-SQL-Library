@@ -3,7 +3,7 @@ body {
   color: white;
   box-sizing: border-box;
   background: linear-gradient(-45deg, black,  grey, white, grey);
-  background-size: 400% 400%;
+  background-size: 600% 600%;
   position: relative;
   animation: change 10s ease-in-out infinite;
 }
@@ -34,6 +34,38 @@ h2 {
   font-weight: 100;
   letter-spacing: 5px;
 }
+
+li {
+  text-align: center;
+  margin: 10px;
+  font-size: 15px;
+  list-style: none;
+  color: red;
+}
+
+.errorMessage {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 100;
+  letter-spacing: 5px;
+}
+
+.back {
+  padding: 25px;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+
+}
+
+.back:hover {
+  background-color: mediumaquamarine;
+  color: white;
+} 
 
 
 .bookLinks {
@@ -185,5 +217,3 @@ input[type=text] {
     color: white;
     background-color: mediumaquamarine;
   }
-
-
