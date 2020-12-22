@@ -1,7 +1,6 @@
 {
   "name": "sql",
   "version": "0.0.0",
-  "engine": {"node": "v12.16.3"},
   "private": true,
   "scripts": {
    "start": "nodemon ./app.js",
