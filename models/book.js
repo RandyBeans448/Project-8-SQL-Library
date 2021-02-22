@@ -31,7 +31,7 @@ module.exports = (sequelize) => {
           },
           genre: {
             type: Sequelize.STRING,
-            allowNull: false, // disallow null
+            allowNull: true, // disallow null
             validate: {
               notEmpty: {
                 msg: 'Please provide a value for "genre"'
@@ -40,7 +40,7 @@ module.exports = (sequelize) => {
           },
           year: {
             type: Sequelize.INTEGER,
-            allowNull: false, // disallow null
+            allowNull: true, // disallow null
             validate: {
               notEmpty: {
                 msg: 'Please provide a value for "year"'
