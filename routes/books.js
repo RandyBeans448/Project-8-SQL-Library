@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Book = require('../models').Book;
+const Sequelize = require('sequelize');
 
 //asyncHandler wraps each route in this function and is taken as the callback
 function asyncHandler(callback){
@@ -19,7 +20,6 @@ router.get('/', asyncHandler(async (req, res, next) => {
     res.render('index', { books, title: 'Book list' });
     console.log('Rendering books');
 }));
-
 
 // Shows the create new book form.
 router.get('/new', asyncHandler(async (req, res) => {
@@ -81,10 +81,15 @@ router.post('/:id', asyncHandler(async (req, res) => {
 
 // Deletes a book. 
 router.post('/:id/delete', asyncHandler(async (req ,res) => {
-  const book = await Book.findByPk(req.params.id)
+  const book = await Book.findByPk(req.params.id);
+  if (book) {
     await book.destroy();
-    res.redirect('/books');
+    res.redirect('/')
+    res.sendStatus(301)
+    console.log('deleted')
+  } else {
+   throw error
+  }
 }));
 
 module.exports = router;
-
