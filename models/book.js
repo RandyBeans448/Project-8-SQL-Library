@@ -32,20 +32,10 @@ module.exports = (sequelize) => {
           genre: {
             type: Sequelize.STRING,
             allowNull: true, // disallow null
-            validate: {
-              notEmpty: {
-                msg: 'Please provide a value for "genre"'
-              }
-             }
           },
           year: {
             type: Sequelize.INTEGER,
             allowNull: true, // disallow null
-            validate: {
-              notEmpty: {
-                msg: 'Please provide a value for "year"'
-              }
-             }
           }
        }, { sequelize })
     return Book
